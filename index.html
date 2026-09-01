@@ -10,7 +10,6 @@
 <title>JEMM Premier Steel Limited | For All Your Construction Solutions</title>
 
 <style>
-
 :root{
     --dark:#0a0d11;
     --dark2:#11161c;
@@ -38,16 +37,14 @@ body{
     line-height:1.6;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 nav{
     height:78px;
     position:fixed;
     inset:0 0 auto;
     z-index:100;
-    background:rgba(10,13,17,.97);
+    background:rgba(10,13,17,.96);
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -106,18 +103,22 @@ nav{
     cursor:pointer;
 }
 
-/* =========================
-   GENERAL
-========================= */
+/* HERO */
 
-section{
-    padding:88px 8%;
+.hero{
+    min-height:760px;
+    padding:150px 8% 80px;
+    color:white;
+    display:flex;
+    align-items:center;
+    background:
+        linear-gradient(105deg,rgba(6,8,10,.95),rgba(10,14,18,.78)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
 }
 
-.title{
-    text-align:center;
-    max-width:760px;
-    margin:0 auto 48px;
+.hero-inner{
+    max-width:780px;
 }
 
 .eyebrow{
@@ -128,23 +129,23 @@ section{
     margin-bottom:16px;
 }
 
-.title .eyebrow{
-    margin-bottom:8px;
+.hero h1{
+    font-size:clamp(43px,6vw,78px);
+    line-height:1.02;
+    letter-spacing:-2px;
+    margin-bottom:24px;
 }
 
-.title h2{
-    font-size:clamp(30px,4vw,48px);
-    line-height:1.1;
+.hero h1 span{
+    color:#d8dce1;
 }
 
-.title p{
-    color:#69737d;
-    margin-top:15px;
+.hero p{
+    max-width:680px;
+    color:#c8cdd3;
+    font-size:18px;
+    margin-bottom:32px;
 }
-
-/* =========================
-   BUTTONS
-========================= */
 
 .buttons{
     display:flex;
@@ -159,7 +160,6 @@ section{
     font-weight:800;
     letter-spacing:.6px;
     font-size:13px;
-    border:none;
     cursor:pointer;
 }
 
@@ -182,52 +182,33 @@ section{
     color:#111;
 }
 
-/* =========================
-   HERO
-========================= */
+/* GENERAL SECTIONS */
 
-.hero{
-    min-height:760px;
-    padding:150px 8% 80px;
-    color:white;
-    display:flex;
-    align-items:center;
-
-    background:
-    linear-gradient(
-        105deg,
-        rgba(6,8,10,.95),
-        rgba(10,14,18,.78)
-    ),
-    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85')
-    center/cover;
+section{
+    padding:88px 8%;
 }
 
-.hero-inner{
-    max-width:780px;
+.title{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 48px;
 }
 
-.hero h1{
-    font-size:clamp(43px,6vw,78px);
-    line-height:1.02;
-    letter-spacing:-2px;
-    margin-bottom:24px;
+.title .eyebrow{
+    margin-bottom:8px;
 }
 
-.hero h1 span{
-    color:#d8dce1;
+.title h2{
+    font-size:clamp(30px,4vw,48px);
+    line-height:1.1;
 }
 
-.hero p{
-    max-width:680px;
-    color:#c8cdd3;
-    font-size:18px;
-    margin-bottom:32px;
+.title p{
+    color:#69737d;
+    margin-top:15px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about{
     display:grid;
@@ -290,9 +271,7 @@ section{
     margin-right:10px;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 
 .services{
     background:#f4f5f6;
@@ -333,9 +312,7 @@ section{
     color:#69737d;
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+/* PRODUCTS */
 
 .products{
     background:var(--dark);
@@ -382,9 +359,7 @@ section{
     margin-bottom:18px;
 }
 
-/* =========================
-   FEATURE
-========================= */
+/* FEATURE */
 
 .feature{
     display:grid;
@@ -432,9 +407,7 @@ section{
     margin-right:10px;
 }
 
-/* =========================
-   WHY JEMM
-========================= */
+/* WHY JEMM */
 
 .why-grid{
     display:grid;
@@ -463,9 +436,7 @@ section{
     font-size:14px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* PROJECTS */
 
 .projects{
     background:#f4f5f6;
@@ -498,20 +469,64 @@ section{
     color:#6c7680;
 }
 
-/* =========================
-   CTA
-========================= */
+/* GALLERY */
+
+.media-section{
+    padding:90px 8%;
+    background:#f4f5f6;
+}
+
+.media-heading{
+    margin-top:60px;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+.media-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.media-item{
+    background:#fff;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    border:1px solid #e3e5e7;
+}
+
+.media-item img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.media-item:hover img{
+    transform:scale(1.06);
+}
+
+.media-item-content{
+    padding:18px;
+}
+
+.media-item-content h3{
+    margin-bottom:5px;
+}
+
+.media-item-content p{
+    color:#69737d;
+    font-size:14px;
+}
+
+/* CTA */
 
 .cta{
     background:
-    linear-gradient(
-        110deg,
-        rgba(7,9,12,.96),
-        rgba(18,22,27,.88)
-    ),
-    url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80')
-    center/cover;
-
+        linear-gradient(110deg,rgba(7,9,12,.96),rgba(18,22,27,.88)),
+        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80')
+        center/cover;
     color:white;
     text-align:center;
 }
@@ -528,72 +543,7 @@ section{
     color:#c4cad0;
 }
 
-/* =========================
-   GALLERY
-========================= */
-
-.media-section{
-    padding:90px 8%;
-    background:#f4f5f6;
-}
-
-.gallery-heading{
-    margin-top:60px;
-    margin-bottom:25px;
-    font-size:32px;
-    color:#182028;
-    border-left:4px solid var(--red);
-    padding-left:15px;
-}
-
-.media-gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.media-item{
-    background:#fff;
-    overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-    border:1px solid #e1e4e7;
-    transition:.25s;
-}
-
-.media-item:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-}
-
-.media-item img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    display:block;
-    transition:.4s;
-}
-
-.media-item:hover img{
-    transform:scale(1.04);
-}
-
-.media-item-content{
-    padding:18px;
-}
-
-.media-item-content h3{
-    margin-bottom:5px;
-    font-size:19px;
-}
-
-.media-item-content p{
-    color:#69737d;
-    font-size:14px;
-}
-
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact{
     display:grid;
@@ -630,10 +580,6 @@ section{
     text-decoration:none;
 }
 
-.contact-item a:hover{
-    color:var(--red);
-}
-
 .form{
     padding:10px 0;
 }
@@ -665,7 +611,6 @@ textarea{
     padding:15px;
     border:1px solid #dfe3e6;
     font:inherit;
-    background:white;
 }
 
 textarea{
@@ -678,9 +623,7 @@ textarea{
     cursor:pointer;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     background:#06080b;
@@ -694,9 +637,7 @@ footer strong{
     color:#fff;
 }
 
-/* =========================
-   WHATSAPP BUTTON
-========================= */
+/* WHATSAPP */
 
 .whatsapp{
     position:fixed;
@@ -712,16 +653,10 @@ footer strong{
     place-items:center;
     font-size:27px;
     box-shadow:0 7px 22px rgba(0,0,0,.3);
-    z-index:110;
+    z-index:10;
 }
 
-.whatsapp:hover{
-    transform:scale(1.08);
-}
-
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media(max-width:900px){
 
@@ -738,7 +673,6 @@ footer strong{
         background:var(--dark);
         padding:25px 6%;
         flex-direction:column;
-        gap:18px;
     }
 
     .menu{
@@ -775,12 +709,9 @@ footer strong{
     .media-gallery{
         grid-template-columns:repeat(2,1fr);
     }
-
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:560px){
 
@@ -825,57 +756,17 @@ footer strong{
         padding:30px;
     }
 
-    .gallery-heading{
-        font-size:27px;
-    }
-
     .media-item img{
-        height:320px;
+        height:360px;
     }
-
-    .brand{
-        font-size:12px;
-        letter-spacing:1px;
-    }
-
-    .brand small{
-        font-size:7px;
-        letter-spacing:2px;
-    }
-
 }
-
-/* =========================
-   EXTRA SMALL PHONES
-========================= */
-
-@media(max-width:380px){
-
-    .brand img{
-        width:44px;
-        height:44px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .btn{
-        width:100%;
-        text-align:center;
-    }
-
-}
-
 </style>
 
 </head>
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -904,15 +795,12 @@ JEMM PREMIER STEEL
 
 <button
 class="menu"
-onclick="document.getElementById('navlinks').classList.toggle('open')"
-aria-label="Open navigation menu">
+onclick="document.getElementById('navlinks').classList.toggle('open')">
 ☰ </button>
 
 </nav>
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -942,8 +830,7 @@ REQUEST A QUOTE
 <a
 class="btn secondary"
 href="https://wa.me/254748708037?text=Hello%20JEMM%20Premier%20Steel%2C%20I%20would%20like%20to%20make%20an%20inquiry."
-target="_blank"
-rel="noopener">
+target="_blank">
 CHAT ON WHATSAPP </a>
 
 </div>
@@ -952,9 +839,7 @@ CHAT ON WHATSAPP </a>
 
 </section>
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -963,8 +848,8 @@ CHAT ON WHATSAPP </a>
 <div class="about-photo">
 
 <img
-src="fabricated-door.jpeg"
-alt="Fabricated steel door by JEMM Premier Steel">
+src="images/doors/door5.jpeg"
+alt="Steel door fabricated by JEMM Premier Steel Limited">
 
 <div class="tag">
 
@@ -987,15 +872,15 @@ Construction solutions with strength at the core.
 </h2>
 
 <p>
-JEMM Premier Steel Limited specializes in supplying quality
-steel products, fabricating steel structures and delivering
-practical construction and water infrastructure solutions.
+JEMM Premier Steel Limited specializes in supplying quality steel
+products, fabricating steel structures and delivering practical
+construction and water infrastructure solutions.
 </p>
 
 <p>
-We work with homeowners, contractors, businesses and
-institutions, helping turn project requirements into strong,
-functional and reliable results.
+We work with homeowners, contractors, businesses and institutions,
+helping turn project requirements into strong, functional and
+reliable results.
 </p>
 
 <ul class="checks">
@@ -1014,9 +899,7 @@ functional and reliable results.
 
 </section>
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
@@ -1031,8 +914,8 @@ Our Core Services
 </h2>
 
 <p>
-One dependable partner for steel, fabrication, water
-infrastructure and construction.
+One dependable partner for steel, fabrication, water infrastructure
+and construction.
 </p>
 
 </div>
@@ -1040,102 +923,64 @@ infrastructure and construction.
 <div class="grid">
 
 <div class="card">
-
 <div class="icon">⚙</div>
-
-<h3>
-Steel Products & Supply
-</h3>
-
+<h3>Steel Products & Supply</h3>
 <p>
 Supply of steel materials and sections for fabrication,
 construction and structural applications.
 </p>
-
 </div>
 
 <div class="card">
-
 <div class="icon">🏗</div>
-
-<h3>
-Steel Fabrication
-</h3>
-
+<h3>Steel Fabrication</h3>
 <p>
 Custom fabrication of doors, gates, grills, frames and
 other steel products to meet your requirements.
 </p>
-
 </div>
 
 <div class="card">
-
 <div class="icon">🏭</div>
-
-<h3>
-Steel Structures
-</h3>
-
+<h3>Steel Structures</h3>
 <p>
 Fabrication and installation of durable structural steel
 solutions for residential, commercial and industrial projects.
 </p>
-
 </div>
 
 <div class="card">
-
 <div class="icon">💧</div>
-
-<h3>
-Borehole Sinking
-</h3>
-
+<h3>Borehole Sinking</h3>
 <p>
-Borehole solutions designed to support reliable water
-access for homes, farms, businesses and institutions.
+Borehole solutions designed to support reliable water access
+for homes, farms, businesses and institutions.
 </p>
-
 </div>
 
 <div class="card">
-
 <div class="icon">🗼</div>
-
-<h3>
-Elevated Tank Stands
-</h3>
-
+<h3>Elevated Tank Stands</h3>
 <p>
-Design, fabrication and installation of strong elevated
-tank stands for dependable water storage systems.
+Design, fabrication and installation of strong elevated tank
+stands for dependable water storage systems.
 </p>
-
 </div>
 
 <div class="card">
-
 <div class="icon">🔨</div>
-
-<h3>
-General Construction
-</h3>
-
+<h3>General Construction</h3>
 <p>
 General building, structural works and related construction
 solutions delivered around your project needs.
 </p>
-
 </div>
 
 </div>
 
 </section>
 
-<!-- =========================
-     PRODUCTS
-========================= -->
+<!-- PRODUCTS -->
 
 <section class="products" id="products">
 
@@ -1201,16 +1046,14 @@ Contact us for availability, sizing and quotations.
 
 </section>
 
-<!-- =========================
-     FEATURE
-========================= -->
+<!-- FEATURED FABRICATION -->
 
 <section class="feature">
 
 <div class="feature-image">
 
 <img
-src="fabricated-door.jpeg"
+src="images/doors/door5.jpeg"
 alt="Custom fabricated steel door">
 
 </div>
@@ -1259,9 +1102,7 @@ Request a quotation with your specifications
 
 </section>
 
-<!-- =========================
-     WHY JEMM
-========================= -->
+<!-- WHY JEMM -->
 
 <section>
 
@@ -1280,68 +1121,42 @@ A practical partner for your next project.
 <div class="why-grid">
 
 <div class="why">
-
 <b>01</b>
-
-<h3>
-Quality Focus
-</h3>
-
+<h3>Quality Focus</h3>
 <p>
 Reliable materials and workmanship are central to every job.
 </p>
-
 </div>
 
 <div class="why">
-
 <b>02</b>
-
-<h3>
-Custom Solutions
-</h3>
-
+<h3>Custom Solutions</h3>
 <p>
 Fabrication and project solutions built around your needs.
 </p>
-
 </div>
 
 <div class="why">
-
 <b>03</b>
-
-<h3>
-Multiple Services
-</h3>
-
+<h3>Multiple Services</h3>
 <p>
 Steel, fabrication, boreholes, tank stands and construction.
 </p>
-
 </div>
 
 <div class="why">
-
 <b>04</b>
-
-<h3>
-Easy to Reach
-</h3>
-
+<h3>Easy to Reach</h3>
 <p>
 Call, email or send us a WhatsApp message for inquiries.
 </p>
-
 </div>
 
 </div>
 
 </section>
 
-<!-- =========================
-     PROJECTS
-========================= -->
+<!-- PROJECTS -->
 
 <section class="projects" id="projects">
 
@@ -1364,7 +1179,7 @@ A sample of the type of custom steel fabrication we undertake.
 <div class="project">
 
 <img
-src="fabricated-door.jpeg"
+src="images/doors/door5.jpeg"
 alt="Custom fabricated steel door project">
 
 <div class="project-copy">
@@ -1374,8 +1189,8 @@ Custom Steel Door Fabrication
 </h3>
 
 <p>
-Fabricated steel door featuring glazed panels,
-ventilation louvers and decorative handle detailing.
+Fabricated steel door featuring glazed panels, ventilation
+louvers and decorative handle detailing.
 </p>
 
 </div>
@@ -1384,37 +1199,7 @@ ventilation louvers and decorative handle detailing.
 
 </section>
 
-<!-- =========================
-     CALL TO ACTION
-========================= -->
-
-<section class="cta">
-
-<h2>
-Let's Build Something Strong.
-</h2>
-
-<p>
-Need steel materials, custom fabrication, a tank stand,
-borehole services or construction support?
-Talk to JEMM Premier Steel Limited today.
-</p>
-
-<a
-class="btn primary"
-href="https://wa.me/254748708037?text=Hello%20JEMM%20Premier%20Steel%2C%20I%20would%20like%20a%20quotation."
-target="_blank"
-rel="noopener">
-
-GET A QUOTE ON WHATSAPP
-
-</a>
-
-</section>
-
-<!-- =========================
-     IMAGE GALLERY
-========================= -->
+<!-- DOORS & WINDOWS GALLERY -->
 
 <section class="media-section" id="gallery">
 
@@ -1429,15 +1214,14 @@ Steel Doors & Windows
 </h2>
 
 <p>
-Explore some of our custom fabricated steel doors
-and windows.
+Explore some of our custom fabricated steel doors and windows.
 </p>
 
 </div>
 
-<!-- STEEL DOORS -->
+<!-- DOORS -->
 
-<h2 class="gallery-heading">
+<h2 class="media-heading">
 Steel Doors
 </h2>
 
@@ -1456,8 +1240,8 @@ Custom Steel Door
 </h3>
 
 <p>
-Strong, secure and professionally fabricated
-to meet your requirements.
+Strong, secure and professionally fabricated to meet
+your requirements.
 </p>
 
 </div>
@@ -1477,8 +1261,8 @@ Steel Security Door
 </h3>
 
 <p>
-Durable steel fabrication designed for
-security and long-term performance.
+Durable steel fabrication designed for security and
+long-term performance.
 </p>
 
 </div>
@@ -1498,8 +1282,7 @@ Fabricated Steel Door
 </h3>
 
 <p>
-Custom-made according to your preferred
-design and dimensions.
+Custom-made according to your preferred design and dimensions.
 </p>
 
 </div>
@@ -1510,16 +1293,16 @@ design and dimensions.
 
 <img
 src="images/doors/door4.jpeg"
-alt="Modern Steel Door">
+alt="Custom Fabricated Steel Door">
 
 <div class="media-item-content">
 
 <h3>
-Modern Steel Door
+Custom Fabricated Door
 </h3>
 
 <p>
-Professional steel door fabrication for
+Professionally fabricated steel door solutions for
 residential and commercial applications.
 </p>
 
@@ -1531,17 +1314,17 @@ residential and commercial applications.
 
 <img
 src="images/doors/door5.jpeg"
-alt="Custom Fabricated Door">
+alt="Premium Steel Door">
 
 <div class="media-item-content">
 
 <h3>
-Custom Fabricated Door
+Premium Steel Door
 </h3>
 
 <p>
-Strong and practical doors fabricated
-according to your specifications.
+Strong and durable custom steel door fabrication by
+JEMM Premier Steel Limited.
 </p>
 
 </div>
@@ -1550,9 +1333,9 @@ according to your specifications.
 
 </div>
 
-<!-- STEEL WINDOWS -->
+<!-- WINDOWS -->
 
-<h2 class="gallery-heading">
+<h2 class="media-heading">
 Steel Windows
 </h2>
 
@@ -1562,7 +1345,7 @@ Steel Windows
 
 <img
 src="images/windows/window1.jpeg"
-alt="Custom Steel Window">
+alt="Steel Window">
 
 <div class="media-item-content">
 
@@ -1571,8 +1354,7 @@ Custom Steel Window
 </h3>
 
 <p>
-Strong and professionally fabricated
-steel window solutions.
+Strong and professionally fabricated steel window solutions.
 </p>
 
 </div>
@@ -1592,8 +1374,7 @@ Steel Window Fabrication
 </h3>
 
 <p>
-Designed to suit residential, commercial
-and construction projects.
+Designed to suit residential, commercial and construction projects.
 </p>
 
 </div>
@@ -1604,7 +1385,7 @@ and construction projects.
 
 <img
 src="images/windows/window3.jpeg"
-alt="Custom Steel Window Design">
+alt="Custom Steel Window">
 
 <div class="media-item-content">
 
@@ -1613,8 +1394,7 @@ Custom Window Design
 </h3>
 
 <p>
-Built according to your required
-measurements and specifications.
+Built according to your required measurements and specifications.
 </p>
 
 </div>
@@ -1625,17 +1405,16 @@ measurements and specifications.
 
 <img
 src="images/windows/window4.jpeg"
-alt="Steel Security Window">
+alt="Steel Window Design">
 
 <div class="media-item-content">
 
 <h3>
-Steel Security Window
+Steel Window Design
 </h3>
 
 <p>
-Durable steel window fabrication
-designed for security and ventilation.
+Durable steel windows fabricated for strength and functionality.
 </p>
 
 </div>
@@ -1646,17 +1425,17 @@ designed for security and ventilation.
 
 <img
 src="images/windows/window5.jpeg"
-alt="Fabricated Steel Window">
+alt="Premium Steel Window">
 
 <div class="media-item-content">
 
 <h3>
-Fabricated Steel Window
+Premium Steel Window
 </h3>
 
 <p>
-Custom steel window solutions for
-different construction requirements.
+Custom steel window fabrication for homes, businesses
+and institutions.
 </p>
 
 </div>
@@ -1667,9 +1446,29 @@ different construction requirements.
 
 </section>
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CALL TO ACTION -->
+
+<section class="cta">
+
+<h2>
+Let's Build Something Strong.
+</h2>
+
+<p>
+Need steel materials, custom fabrication, a tank stand,
+borehole services or construction support? Talk to
+JEMM Premier Steel Limited today.
+</p>
+
+<a
+class="btn primary"
+href="https://wa.me/254748708037?text=Hello%20JEMM%20Premier%20Steel%2C%20I%20would%20like%20a%20quotation."
+target="_blank">
+GET A QUOTE ON WHATSAPP </a>
+
+</section>
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -1709,12 +1508,8 @@ JEMM Premier Steel Limited
 
 <a
 href="https://wa.me/254748708037"
-target="_blank"
-rel="noopener">
-
-0748 708 037
-
-</a>
+target="_blank">
+0748 708 037 </a>
 
 </div>
 
@@ -1723,9 +1518,7 @@ rel="noopener">
 <b>EMAIL</b>
 
 <a href="mailto:jemmpremiersteel@gmail.com">
-
-[jemmpremiersteel@gmail.com](mailto:jemmpremiersteel@gmail.com)
-
+jemmpremiersteel@gmail.com
 </a>
 
 </div>
@@ -1740,9 +1533,9 @@ Lusigetti Market, along Thogoto–Mutarakwa Road
 
 </div>
 
-<!-- QUOTE FORM -->
-
-<form class="form" onsubmit="sendWhatsApp(event)">
+<form
+class="form"
+onsubmit="sendWhatsApp(event)">
 
 <h3>
 Request a Quote
@@ -1758,7 +1551,6 @@ Fill in your details and your inquiry will open directly in WhatsApp.
 
 <input
 id="name"
-type="text"
 required
 placeholder="Your Name">
 
@@ -1768,7 +1560,6 @@ placeholder="Your Name">
 
 <input
 id="phone"
-type="tel"
 required
 placeholder="Phone Number">
 
@@ -1778,7 +1569,7 @@ placeholder="Phone Number">
 
 <div class="field">
 
-<select id="service" required>
+<select id="service">
 
 <option value="">
 Select a Service
@@ -1817,7 +1608,8 @@ General Construction
 <textarea
 id="message"
 required
-placeholder="Tell us about your project or the materials you need..."></textarea>
+placeholder="Tell us about your project or the materials you need...">
+</textarea>
 
 </div>
 
@@ -1835,9 +1627,7 @@ SEND INQUIRY VIA WHATSAPP
 
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1855,66 +1645,46 @@ For All Your Construction Solutions
 
 </footer>
 
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
+<!-- WHATSAPP FLOATING BUTTON -->
 
 <a
 class="whatsapp"
 href="https://wa.me/254748708037?text=Hello%20JEMM%20Premier%20Steel%2C%20I%20would%20like%20to%20make%20an%20inquiry."
 target="_blank"
-rel="noopener"
 aria-label="Chat on WhatsApp">
+◔ </a>
 
-☏
-
-</a>
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- JAVASCRIPT -->
 
 <script>
 
-function sendWhatsApp(event){
+function sendWhatsApp(e){
 
-    event.preventDefault();
+    e.preventDefault();
 
     const name =
-        document.getElementById("name").value.trim();
+        document.getElementById('name').value;
 
     const phone =
-        document.getElementById("phone").value.trim();
+        document.getElementById('phone').value;
 
     const service =
-        document.getElementById("service").value;
+        document.getElementById('service').value;
 
     const message =
-        document.getElementById("message").value.trim();
-
+        document.getElementById('message').value;
 
     const text =
-`Hello JEMM Premier Steel,
-
-Name: ${name}
-Phone: ${phone}
-Service: ${service}
-
-Project details:
-${message}`;
-
-
-    const whatsappURL =
-        "https://wa.me/254748708037?text=" +
-        encodeURIComponent(text);
-
+        `Hello JEMM Premier Steel,%0A%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Phone: ${encodeURIComponent(phone)}%0A` +
+        `Service: ${encodeURIComponent(service)}%0A%0A` +
+        `Project details:%0A${encodeURIComponent(message)}`;
 
     window.open(
-        whatsappURL,
-        "_blank",
-        "noopener"
+        'https://wa.me/254748708037?text=' + text,
+        '_blank'
     );
-
 }
 
 </script>
