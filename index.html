@@ -5,7 +5,81 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="JEMM Premier Steel Limited - Steel supply, fabrication, steel structures, borehole sinking, elevated tank stands and general construction.">
 <title>JEMM Premier Steel Limited | For All Your Construction Solutions</title>
-<style>
+<s.media-section{
+    padding:90px 8%;
+    background:#f4f5f6;
+}
+
+.media-tabs{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:35px;
+    flex-wrap:wrap;
+}
+
+.media-btn{
+    padding:12px 25px;
+    background:#11161c;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.media-btn.active,
+.media-btn:hover{
+    background:#d95050;
+}
+
+.media-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.media-item{
+    background:#fff;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.media-item img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.media-item:hover img{
+    transform:scale(1.06);
+}
+
+.media-item-content{
+    padding:18px;
+}
+
+.media-item-content h3{
+    margin-bottom:5px;
+}
+
+.media-item-content p{
+    color:#69737d;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .media-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .media-gallery{
+        grid-template-columns:1fr;
+    }
+}tyle>
 :root{--dark:#0a0d11;--dark2:#11161c;--steel:#d7dbe0;--muted:#9ba3ad;--red:#d95050;--line:#242b33;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#182028;line-height:1.6}
 nav{height:78px;position:fixed;inset:0 0 auto;z-index:100;background:rgba(10,13,17,.96);display:flex;align-items:center;justify-content:space-between;padding:8px 6%;border-bottom:1px solid #1e252d}
@@ -83,7 +157,154 @@ footer{background:#06080b;color:#8d98a3;padding:35px 8%;text-align:center;font-s
 <div class="project"><img src="fabricated-door.jpeg" alt="Custom fabricated steel door project"><div class="project-copy"><h3>Custom Steel Door Fabrication</h3><p>Fabricated steel door featuring glazed panels, ventilation louvers and decorative handle detailing.</p></div></div></section>
 
 <section class="cta"><h2>Let's Build Something Strong.</h2><p>Need steel materials, custom fabrication, a tank stand, borehole services or construction support? Talk to JEMM Premier Steel Limited today.</p><a class="btn primary" href="https://wa.me/254748708037?text=Hello%20JEMM%20Premier%20Steel%2C%20I%20would%20like%20a%20quotation." target="_blank">GET A QUOTE ON WHATSAPP</a></section>
+<section class="media-section" id="gallery">
 
+    <div class="title">
+        <div class="eyebrow">OUR PRODUCTS</div>
+
+        <h2>Steel Doors & Windows</h2>
+
+        <p>
+            Explore some of our custom fabricated steel doors
+            and windows.
+        </p>
+    </div>
+
+
+    <!-- STEEL DOORS -->
+
+    <h2 style="margin-bottom:25px;">
+        Steel Doors
+    </h2>
+
+    <div class="media-gallery">
+
+        <div class="media-item">
+
+            <img src="images/doors/door1.jpg"
+                 alt="Custom Steel Door">
+
+            <div class="media-item-content">
+
+                <h3>Custom Steel Door</h3>
+
+                <p>
+                    Strong, secure and professionally fabricated
+                    to meet your requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="media-item">
+
+            <img src="images/doors/door2.jpg"
+                 alt="Steel Security Door">
+
+            <div class="media-item-content">
+
+                <h3>Steel Security Door</h3>
+
+                <p>
+                    Durable steel fabrication designed for
+                    security and long-term performance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="media-item">
+
+            <img src="images/doors/door3.jpg"
+                 alt="Fabricated Steel Door">
+
+            <div class="media-item-content">
+
+                <h3>Fabricated Steel Door</h3>
+
+                <p>
+                    Custom-made according to your preferred
+                    design and dimensions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- STEEL WINDOWS -->
+
+    <h2 style="margin-top:70px; margin-bottom:25px;">
+        Steel Windows
+    </h2>
+
+    <div class="media-gallery">
+
+        <div class="media-item">
+
+            <img src="images/windows/window1.jpg"
+                 alt="Steel Window">
+
+            <div class="media-item-content">
+
+                <h3>Custom Steel Window</h3>
+
+                <p>
+                    Strong and professionally fabricated
+                    steel window solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="media-item">
+
+            <img src="images/windows/window2.jpg"
+                 alt="Steel Window Fabrication">
+
+            <div class="media-item-content">
+
+                <h3>Steel Window Fabrication</h3>
+
+                <p>
+                    Designed to suit residential, commercial
+                    and construction projects.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="media-item">
+
+            <img src="images/windows/window3.jpg"
+                 alt="Custom Steel Window">
+
+            <div class="media-item-content">
+
+                <h3>Custom Window Design</h3>
+
+                <p>
+                    Built according to your required
+                    measurements and specifications.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <section id="contact"><div class="title"><div class="eyebrow">CONTACT US</div><h2>Start Your Inquiry</h2></div><div class="contact">
 <div class="contact-box"><h3>JEMM Premier Steel Limited</h3>
 <div class="contact-item"><b>CALL US</b><a href="tel:+254713413743">0713 413 743</a></div>
